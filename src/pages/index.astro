@@ -1,10 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-import "../styles/global.css";
+import Greeting from "../components/Greeting.jsx";
 const pageTitle = "Alex's Astro Site";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>My awesome blog subtitle</h2>
+	<Greeting
+		client:load
+		messages={["hi", "hello", "hola", "Hablas espaniol?", "Como estas?"]}
+	/>
 </BaseLayout>
